@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.dark {
+            background-color: black;
+            color: antiquewhite;
+        }
+
+        body.dark button {
+            background-color: antiquewhite;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        #mode img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .button {
+            background-color: lavender;
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nameee {
+            padding-left: 30px;
+        }
+
+        .userImg {
+            width: 200px;
+            border-radius: 500px;
+        }
+
+        .div {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body id="body" class="">
+    <h1>My name is jay shah</h1>
+    <div class="box">
+        <img class="userImg" src="411334517_917846663107470_8048001327491066513_n.jpg" style="width: 100px;" alt="">
+        <div class="nameee">
+            <p>My id is: jay_0101</p>
+            <p>My name is: 💫🕊️Jay🦅✨:..</p>
+        </div>
+    </div>
+    <div style="display: flex; padding-left: 45px;">
+        <button class="button">
+            <a target="_blank" href="https://www.instagram.com/jay_0101_/">
+                Go to my insta profile
+            </a>
+        </button>
+        <div style="padding-left: 10px;  margin-top: 6px;" onclick="changeTheme()" id="mode">
+            <img id="theme" src="moon.png" alt="">
+        </div>
+    </div>
+    <script>
+        let flag = true
+        function changeTheme() {
+            let body = document.getElementById("body")
+            let theme = document.getElementById("theme")
+            body.classList.toggle("dark")
+            if (flag) {
+                theme.src = "sun.png"
+                flag = !flag
+            }
+            else {
+                theme.src = "moon.png"
+                flag = !flag
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
